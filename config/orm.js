@@ -55,9 +55,7 @@ var orm = {
         INSERT INTO ${table} (${cols.toString()}) 
         VALUES (${printQuestionMarks(vals.length)}) 
     `;
-
     console.log(`orm create query string: ${queryString}`);
-
     connection.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
@@ -73,15 +71,26 @@ var orm = {
         SET ${objToSql(objColVals)}
         WHERE ${condition}
     `
-
     console.log(`orm update query string: ${queryString}`);
-
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
-
       cb(result);
+    });
+  },
+
+  // ex. objColVals would be {name: gringo taco, devoured: true}
+  delete: function(table, condition, cb) {
+    var queryString = `
+        DELETE FROM ${table}
+        WHERE ${condition}
+    `
+    console.log(`orm update query string: ${queryString}`);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
     });
   }
 };

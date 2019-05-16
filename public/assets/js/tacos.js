@@ -43,4 +43,13 @@ $(function() {
     );
   });
 
+  $(".delete-btn").on("click", function(event) {
+    console.log("delete clicked!")
+    var id = $(this).data("id");
+    // Send the DELETE request.
+    $.ajax("/api/tacos/" + id, {
+      type: "DELETE"
+    }).then(location.reload());
+  });
+
 });

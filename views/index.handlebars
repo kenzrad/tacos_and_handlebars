@@ -1,34 +1,62 @@
-<h1>TACOS</h1>
 
-<h2>Tacos to Eat!</h2>
 
-<ul>
-  {{#each tacos}}
-    {{#unless devoured}}
-      <li> {{name}} </li>
-      <button data-id="{{id}}" class="devour-btn">Devour Me!</button>
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="container">
 
-<h2>Devoured Tacos!</h2>
-
-<ul>
-  {{#each tacos}}
-    {{#if devoured}}
-      <li> {{name}}</li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Taco</h2>
-<form class="create-taco">
-
-  <div class="form-group">
-    <label for="ta">Taco Type:</label>
-    <input type="text" id="ta" name="name">
+  <div class="row text-center border-bottom  border-bottom-solid mb-5">
+    <div class="col-12">
+      <img class="my-3" src="/assets/img/TACO_TITLE.png"/>
+    </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4 px-0 mr-5">
+      <img class="my-3" src="/assets/img/TACO_toEat.png" />
+      <ul class="ml-1 pl-2">
+        {{#each tacos}}
+          {{#unless devoured}}
+            <li> 
+              {{name}}  
+              <button data-id="{{id}}" type="button" class="devour-btn btn btn-sm btn-outline-dark mx-1">Eat dis!
+              </button>
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-4 px-0">
+      <img class="my-3" src="/assets/img/TACO_devoured.png" />
+      <ul class="ml-1 pl-2">
+        {{#each tacos}}
+          {{#if devoured}}
+            <li> 
+              {{name}}
+              <button data-id="{{id}}" type="button" class="delete-btn btn btn-sm btn-link mx-1 pb-2">X
+              </button>
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
 
-  <button type="submit">Add Taco</button>
-</form>
+  <div class="row text-center">
+    <div class="col-12">
+      <img class="my-3" src="/assets/img/TACO_order.png" />
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <form class="form-inline-block create-taco">
+        <div class="form-group">
+          <input class="form-control mr-3" placeholder="Taco name here" type="text" id="ta" name="name">
+        </div>
+        <button type="submit" class="btn btn-outline-dark">Order Taco</button>
+      </form>
+    </div>
+    <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>

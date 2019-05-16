@@ -20,6 +20,12 @@ var taco = {
       console.log(condition);
     });
   },
+  delete: function(condition, cb) {
+    orm.delete("tacos", condition, 
+    function(res) {
+      cb(res);
+    });
+  },
 };
 
 // Export the database functions for the controller (catsController.js).
