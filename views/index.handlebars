@@ -1,49 +1,47 @@
 
 
-<div class="container">
+<div class="container container-fluid menu-container my-3 py-5">
 
   <div class="row text-center border-bottom  border-bottom-solid mb-5">
     <div class="col-12">
-      <img class="my-3" src="/assets/img/TACO_TITLE.png"/>
+      <img class="img-fluid my-3 p-2" src="/assets/img/TACO_TITLE.png"/>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-4 px-0 mr-5">
-      <img class="my-3" src="/assets/img/TACO_toEat.png" />
-      <ul class="ml-1 pl-2">
+  <div class="row taco-row">
+    <div class="col-lg-5 px-5 mr-5 text-center">
+      <img class="img-fluid my-3 p-2" src="/assets/img/TACO_toEat.png" />
+      <ul class="ml-4 pl-2 text-left">
         {{#each tacos}}
           {{#unless devoured}}
             <li> 
               {{name}}  
-              <button data-id="{{id}}" type="button" class="devour-btn btn btn-sm btn-outline-dark mx-1">Eat dis!
+              <button data-id="{{id}}" title="Eat This Taco!" type="button" class="fas fa-pepper-hot devour-btn btn m-1">
               </button>
             </li>
           {{/unless}}
         {{/each}}
       </ul>
     </div>
-    <div class="col-md-4 px-0">
-      <img class="my-3" src="/assets/img/TACO_devoured.png" />
-      <ul class="ml-1 pl-2">
+    <div class="col-lg-5 ml-5 px-5 text-center">
+      <img class="img-fluid my-3 p-2" src="/assets/img/TACO_devoured.png" />
+      <ul class="ml-4 pl-2 text-left">
         {{#each tacos}}
           {{#if devoured}}
             <li> 
               {{name}}
-              <button data-id="{{id}}" type="button" class="delete-btn btn btn-sm btn-link mx-1 pb-2">X
+              <button data-id="{{id}}" title="Destroy Evidence" type="button" class="fas fa-ban delete-btn btn mx-1 pb-2">
               </button>
             </li>
           {{/if}}
         {{/each}}
       </ul>
     </div>
-    <div class="col-md-2"></div>
   </div>
 
   <div class="row text-center">
     <div class="col-12">
-      <img class="my-3" src="/assets/img/TACO_order.png" />
+      <img class="img-fluid my-3 p-2" src="/assets/img/TACO_order.png" />
     </div>
   </div>
   <div class="row text-center">
@@ -53,10 +51,22 @@
         <div class="form-group">
           <input class="form-control mr-3" placeholder="Taco name here" type="text" id="ta" name="name">
         </div>
-        <button type="submit" class="btn btn-outline-dark">Order Taco</button>
+        <button type="submit" title="Add This Taco!" class="btn btn-outline-dark">Order Taco</button>
       </form>
     </div>
     <div class="col-md-3"></div>
     </div>
+<br>
+<br>
+  <div class="row text-center border-top  border-top-solid pt-3 mt-5 mb-0">
+    <div class="col-12">
+      <a href="https://github.com/kenzrad/tacos_and_handlebars"><button title="github repo" type="button" class="fab fa-2x fa-github m-4 pb-2 border-0 footer-btn">
+      </button></a>
+      <a href="https://www.linkedin.com/in/kensey-barker-89388535/"><button title="Kensey Barker Linkedin" type="button" class="fab fa-2x fa-linkedin-in m-4 pb-2 border-0 footer-btn">
+      </button></a>
+      <a href="https://kenzrad.github.io/portfolio/"><button title="Kensey Barker Portfolio" type="button" class="fab fa-2x fa-kaggle m-4 pb-2 border-0 footer-btn">
+      </button></a>
+    </div>
   </div>
+
 </div>

@@ -18,10 +18,30 @@ li {
   }
   
   body {
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: lightblue;
+  }
+
+  .devour-btn {
+    opacity: 0.5;
+    color: darkred;
   }
 
   .delete-btn {
-    font-size: 0.5rem;
-    font: maroon;
+    opacity: 0.5;
+    color: darkred;
+  }
+
+  .footer-btn {
+    opacity: 0.5;
+    color:darkred;
+  }
+
+  .menu-container {
+    background-color: white;
+    min-height: 750px;
+  }
+
+  .taco-row {
+    min-height: 350px;
   }
