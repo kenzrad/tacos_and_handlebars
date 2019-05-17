@@ -1,5 +1,6 @@
-![title](public/assets/img/TACO_TITLE.png)
-###An App to Log Your Taco Eating Adventures!
+    ![title](public/assets/img/TACO_TITLE.png)
+
+###  An App to Log Your Taco Eating Adventures!
 
 ## Overview
 
@@ -7,15 +8,18 @@ Tacos for the People is a full-stack app that utlizes node express and handlebar
 
 ## How it Works
 
-![make](public/assets/img/move.png)
+        ![make](public/assets/img/move.png)
+
 * Users can input what kind of taco they want to eat
 
-![eat](public/assets/img/eat.png)
+        ![eat](public/assets/img/eat.png)
+
 * Upon submission, the app will display the taco on the left side of the page -- waiting to be devoured.
 
 * Each Taco in the Taco Queue also has a `Devour` button (a hot pepper). 
 
-![devour](public/assets/img/devoured.png)
+        ![devour](public/assets/img/devoured.png)
+
 * When the user clicks it, the taco will move to the right side of the page.
 
 * As long as the taco is on the page, it will be stored in the database, whether devoured or not.
