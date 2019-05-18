@@ -14,11 +14,9 @@ Tacos for the People is a full-stack app that utlizes node express and handlebar
 
 ![make](public/assets/img/move.png)
 
-***
-
+---
 * Users can input what kind of taco they want to eat
-
-***
+---
 
 ![eat](public/assets/img/eat.png)
 
