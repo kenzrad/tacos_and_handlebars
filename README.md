@@ -20,7 +20,10 @@ Tacos for the People is a full-stack app that utlizes node express and handlebar
 
 * Each Taco in the Taco Queue also has a `Devour` button (a hot pepper)
 
-![eat](public/assets/img/eat.png)
+<kbd>
+  <img src="public/assets/img/eat.png">
+</kbd>
+
 ---
 
 * When the user clicks it, the taco will move to the right side of the page.
