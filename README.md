@@ -9,6 +9,8 @@
 
 Tacos for the People is a full-stack app that utlizes node express and handlebars. It is deployed on heroku using a JAWSDB/SQL database to RESTfully create, read, update, and delete taco data. Back-end files are stored in a MVC structure.
 
+Access it on heroku [here](https://guarded-cliffs-55435.herokuapp.com/)!
+
 ## How it Works
 
 * Users can input what kind of taco they want to eat
